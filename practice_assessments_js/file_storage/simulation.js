@@ -1,4 +1,5 @@
 const { file } = require("@babel/types");
+const { log } = require("console");
 
 /**
  * Simulates a coding framework operation on a list of lists of strings.
@@ -20,7 +21,7 @@ function simulateCodingFramework(listOfLists) {
 
   for (const operation of listOfLists) {
     const [command, ...args] = operation;
-    // console.log({ command })
+    console.log({ command })
 
     switch (command) {
       case 'FILE_UPLOAD': {
@@ -56,6 +57,22 @@ function simulateCodingFramework(listOfLists) {
 
         break;
       }
+
+      case 'FILE_SEARCH': {
+        const [prefix] = args;
+
+        let files = Object.entries(storage).filter(e => e[0].startsWith(prefix));
+        files.sort((a, b) => {
+          if (a[1].size != b[1].size) {
+            return b[0].localeCompare(a[0])
+          } else return b[1].size - a[1].size;
+        })
+
+        output.push(`found [${files.map(f => f[0]).join(', ')}]`)
+
+        break;
+      }
+
       default:
         output.push("No operations provided.")
     }
