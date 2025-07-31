@@ -1,0 +1,27 @@
+{
+  "name": "codesignal_practice_industry_coding_framework",
+  "version": "1.0.0",
+  "description": "This serves as a mock example of an industry coding framework assessment, similar to those found in pre-screens on CodeSignal. It's important to highlight the rarity of comprehensive guides or examples on navigating these types of assessments on the internet, making this document an invaluable resource for those seeking to prepare for such challenges 🚀.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:level1": "jest -t \"group 1\"",
+    "test:level2": "jest -t \"group 2\"",
+    "test:level3": "jest -t \"group 3\"",
+    "test:level4": "jest -t \"group 4\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taimurmshah/CodeSignal_Practice_Industry_Coding_Framework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taimurmshah/CodeSignal_Practice_Industry_Coding_Framework/issues"
+  },
+  "homepage": "https://github.com/taimurmshah/CodeSignal_Practice_Industry_Coding_Framework#readme",
+  "devDependencies": {
+    "jest": "^30.0.5"
+  }
+}
